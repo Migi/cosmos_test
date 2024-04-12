@@ -1,0 +1,21 @@
+dbt_playground:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: gitpod
+      password: postgres
+      port: 5432
+      dbname: postgres
+      schema: dbt_playground
+      threads: 3
+    airflow:
+      type: postgres
+      host: postgres
+      user: airflow
+      password: airflow
+      port: 5432
+      dbname: airflow
+      schema: dbt_playground
+      threads: 3
